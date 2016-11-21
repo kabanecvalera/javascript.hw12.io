@@ -11,19 +11,20 @@
 
 	<script type="text/template" id="wrapper-template">
     
-        <div>
-            <ul></ul>
-            <div>
-                <input type="text">
-                <button></button>
+        <div class="wrapper">
+            <ul class="item-list"></ul>
+            <div class="controlls">
+                <input type="text" class="item-value">
+                <button class="item-add"></button>
             </div>
         </div>
     
     </script>
 	
-	<script>
+	<script type="text/template" id="list-template">
     
-        
+      <% for (var i=0; i < data.length; i++) { %>
+        <li><%= data[i] %> <span data-value="<%= data[i] %>" class="item-delete">x</span></li><% }; %>
     
     </script>
     
